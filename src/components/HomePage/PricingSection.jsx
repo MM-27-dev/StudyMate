@@ -10,7 +10,7 @@ const plans = [
       "Multi-platform Integration (limited to 1 device)",
       "Multilingual Support (2 languages)",
     ],
-    image: "/free-plan.svg", // replace with your path
+    image: "/free-plan.svg", 
     button: {
       text: "Your Current Plan",
       disabled: true,
@@ -56,7 +56,7 @@ const PricingSection = () => {
   return (
     <section className="bg-black text-white  px-4 ">
       <div className="max-w-7xl mx-auto text-center">
-        <span className="text-white bg-[#a08cfb] bg-[#C4B5FD]/10 text-sm font-medium py-2 px-4 rounded-xl mb-4 inline-block">
+        <span className="text-white bg-[#C4B5FD]/10 text-sm font-medium py-2 px-4 rounded-xl mb-4 inline-block">
           Plan & Pricing
         </span>
         <h2 className="text-4xl md:text-5xl font-extrabold mb-3">

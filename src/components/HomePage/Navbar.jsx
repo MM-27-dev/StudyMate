@@ -1,14 +1,25 @@
 import React, { useState } from "react";
 import { Menu, X } from "lucide-react";
+import { useNavigate } from "react-router-dom";
+
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
+  const navigate = useNavigate();
+
+  const handleSignUp = () => {
+    navigate("/login");
+  };
+
+  const goHomePage = () => {
+    navigate("/")
+  }
 
   return (
     <nav className="bg-black text-white px-6 md:px-12 py-4 shadow-md">
       <div className="flex items-center justify-between">
         {/* Logo */}
-        <div className="flex items-center space-x-2">
+        <div className="flex items-center space-x-2" onClick={goHomePage}>
           <img alt="logo-image" src="/logo.svg" className="w-8 h-8" />
           <span className="text-xl font-semibold">BotBuzz</span>
         </div>
@@ -30,6 +41,7 @@ const Navbar = () => {
           <a
             href="#"
             className="hover:text-[#A78BFA] transition-colors duration-300"
+            onClick={handleSignUp}
           >
             Sign In
           </a>
